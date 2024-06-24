@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Romans</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="LOGO.jpg" type="image/jpg"> <!-- Aquí se agrega el ícono -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="LOGO.jpg" alt="History Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">INICIO</a></li>
+                <li><a href="#guia-tv">GUIA TV</a></li>
+                <li><a href="#noticias">NOTICIAS</a></li>
+                <li><a href="#hoy-en-la-historia">HOY EN LA HISTORIA</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <a href="#search"><img src="BUSCAR.jpg" alt="Buscar"></a>
+        </div>
+    </header>
+
+    <div class="carousel">
+        <div class="carousel-images">
+            <div class="carousel-item active">
+                <img src="arriveRoman.jpeg" alt="Imagen 1" data-video-src="primero2.mp4">
+                <div class="carousel-caption">
+                    <h2>Arrival of the Romans</h2>
+                    <p>55 BC  /  43 BC.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="vidaRoman.jpeg" alt="Imagen 2" data-video-src="romanLife.mp4">
+                <div class="carousel-caption">
+                    <h2>Roman Life</h2>
+                    <p>AD 300.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="construccion.jpeg" alt="Imagen 3" data-video-src="ruta.mp4">
+                <div class="carousel-caption">
+                    <h2>Roman Roads in Britain</h2>
+                    <p>1000 Miles of roads.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="burdica.jpeg" alt="Imagen 4" data-video-src="boudica.mp4">
+                <div class="carousel-caption">
+                    <h2>Religion in Roman Britain</h2>
+                    <p>AD 313   /  AD 392</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="theend.jpeg" alt="Imagen 5" data-video-src="finish.mp4">
+                <div class="carousel-caption">
+                    <h2>The End of Roman Britain</h2>
+                    <p>AD 367 / AD 410</p>
+                </div>
+            </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+        <div class="carousel-indicators">
+            <span class="indicator active" onclick="goToSlide(0)"></span>
+            <span class="indicator" onclick="goToSlide(1)"></span>
+            <span class="indicator" onclick="goToSlide(2)"></span>
+            <span class="indicator" onclick="goToSlide(3)"></span>
+            <span class="indicator" onclick="goToSlide(4)"></span>
+        </div>
+    </div>
+
+    <div class="modal" id="videoModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeVideo()">&times;</span>
+            <video controls autoplay id="modalVideo">
+                <!-- La fuente del video será establecida dinámicamente -->
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
